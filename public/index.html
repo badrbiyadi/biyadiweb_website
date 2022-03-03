@@ -6,10 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Biyadiweb</title>
+    <style>
+        .text-outlined {
+            color: inherit;
+            -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
+            -webkit-text-stroke-width: 2px;
+            -webkit-text-stroke-color: inherit;
+        }
+        .banner  {
+            background: url('./images/banner.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
 </head>
 <body>
     <!-- navbar -->
-    <nav class="container h-16 mx-auto bg-gray-200 md:bg-transparent align-center ">
+    <nav class="container sticky top-0 z-2 h-16 mx-auto bg-gray-200 md:bg-transparent align-center ">
         <div class="h-full bg-transparent md:bg-gray-200 px-2 grid grid-cols-2 md:grid-cols-4 items-center ">
             <!-- logo -->
             <div class="col-span-1">
@@ -109,7 +122,7 @@
         </div>
     </nav>
     <!-- Change the class -right-2/3 to right-0 to display the menu -->
-    <div class="fixed md:hidden top-0 -right-2/3 w-2/3 h-full bg-gray-200 shadow ">
+    <div class="fixed z-3 md:hidden top-0 -right-2/3 w-2/3 h-full bg-gray-200 shadow ">
         <div class="h-16 px-2 mb-4 flex items-center justify-end bg-gray-300 border border-gray-400">
             <div class="p-2 w-10">
                 <span class="block w-full rotate-45 h-0.5 bg-gray-600"></span>
@@ -124,7 +137,24 @@
             <a class="block py-1 hover:text-primary" href="#">Get in touch</a>
         </div>
     </div>
+
     <!-- banner -->
+    <section class="banner h-screen  bg-gray-600 bg-blend-overlay">
+        <div class="container pt-28 text-gray-100 ">
+            <div class="text-7xl md:text-9xl md:w-1/2 w-2/3 mb-10  space-y-2">
+                <h1>Strategic <span class="text-outlined">Digital</span> Solutions</h1>
+                
+                <h1> </h1>
+            </div>
+            <div class="md:w-1/2 w-2/3 text-md">
+                <p>We have a strong foundation built on legacy and emerging technologies, including excellent track record of on-time deliveries.</p>
+            </div>
+            <div class="pt-4">
+                <button class="bg-primary  hover:bg-blue-500 text-md capitalize font-bold py-2 px-4 ">_Get a quote </button>
+            </div>
+        </div>
+    </section>
+
     <!-- why us  -->
     <!-- our service -->
     <!-- what we do -->
