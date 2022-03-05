@@ -10,7 +10,7 @@
         .text-outlined {
             color: inherit;
             -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
-            -webkit-text-stroke-width: 2px;
+            -webkit-text-stroke-width: 0.1rem;
             -webkit-text-stroke-color: inherit;
         }
         .banner  {
@@ -22,7 +22,7 @@
 </head>
 <body>
     <!-- navbar -->
-    <nav class="container sticky top-0 z-2 h-16 mx-auto bg-gray-200 md:bg-transparent align-center ">
+    <nav class="container sticky top-0 z-2 h-16 bg-gray-200 md:bg-transparent align-center ">
         <div class="h-full bg-transparent md:bg-gray-200 px-2 grid grid-cols-2 md:grid-cols-4 items-center ">
             <!-- logo -->
             <div class="col-span-1">
@@ -140,13 +140,11 @@
 
     <!-- banner -->
     <section class="banner h-screen  bg-gray-600 bg-blend-overlay">
-        <div class="container pt-28 text-gray-100 ">
-            <div class="text-7xl md:text-9xl md:w-1/2 w-2/3 mb-10  space-y-2">
-                <h1>Strategic <span class="text-outlined">Digital</span> Solutions</h1>
-                
-                <h1> </h1>
+        <div class="container pt-20 text-gray-100 ">
+            <div class="text-7xl xl:text-9xl xl:w-1/2 w-2/3 mb-10  space-y-2">
+                <h1>Strategic <span class="text-outlined">Digital</span> Solutions</h1>                
             </div>
-            <div class="md:w-1/2 w-2/3 text-md">
+            <div class="xl:w-1/2 w-2/3 text-md">
                 <p>We have a strong foundation built on legacy and emerging technologies, including excellent track record of on-time deliveries.</p>
             </div>
             <div class="pt-4">
@@ -156,6 +154,27 @@
     </section>
 
     <!-- why us  -->
+
+    <section class="py-4 ">
+        <div class="container grid  grid-cols-2 xl:grid-cols-5">
+            <div class="col-span-3">
+                <div class="pb-8">
+                    <h1 class="xl:text-6xl text-5xl"> Expect nothing less than <span class="text-outlined">_perfect</span></h1>
+                </div>
+                <div class="text-md">
+                    <p>We provide digital transformation solutions, enabling companies to make their visions reality. With us at your side, you will find the IT solution to achieve your strategic and financial goals.</p>
+
+                    <a class="block py-5 font-bold" href="#">_More about us</a>
+                </div>
+            </div>
+            <div class="col-span-2 justify-self-end">
+                <div class="h-96 w-full hidden xl:block  w-2/3 mx-auto xl:mr-0  overflow-y-hidden relative xl:-top-8">
+                    <img class="aspect-[3/4]" src="./images/side.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- our service -->
     <!-- what we do -->
     <!-- contact -->
@@ -171,6 +190,7 @@
                             xl: '5rem',
                             '2xl': '6rem',
                         },
+                        center: true,
                     },
                     colors: {
                         'primary': '#049dd9',
