@@ -35,5 +35,34 @@ document.addEventListener('DOMContentLoaded', function() {
         mobileMenu.classList.remove('-right-0')
     }
 
+    // Navbar transparent if in the top
+
+    if(window.scrollY < 100) {
+        makeNavbarTransparent()
+    }else {
+        makeNavbarDark()
+    }
+
+    document.addEventListener('scroll', function(e) {
+        if(window.scrollY < 100) {
+            makeNavbarTransparent()
+        }else {
+            makeNavbarDark()
+        }
+    });
+
+    function makeNavbarTransparent() {
+        document.getElementById('socialMediaBtns').classList.add('fill-white')
+        document.getElementById('navbar').classList.remove('md:bg-gray-200')
+        document.getElementById('navbar').classList.add('text-white')
+    }
+
+    function makeNavbarDark() {
+        document.getElementById('socialMediaBtns').classList.remove('fill-white')
+        document.getElementById('navbar').classList.add('md:bg-gray-200')
+        document.getElementById('navbar').classList.remove('text-white')
+    }
+    
+
 })
 
