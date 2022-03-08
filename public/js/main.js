@@ -49,6 +49,13 @@ document.addEventListener('DOMContentLoaded', function() {
         }else {
             makeNavbarDark()
         }
+
+        //Go top btn display on scroll
+        if(window.scrollY >  window.innerHeight) {
+            showGoTopBtn()
+        }else {
+            hideGoTopBtn()
+        }
     });
 
     function makeNavbarTransparent() {
@@ -89,6 +96,20 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             }
         })
+
+
+    // Go to top 
+
+
+    console.log(window.scrollY)
+    
+
+    function showGoTopBtn() {
+        document.getElementById('goTopBtn').classList.remove('hidden')
+    }
+    function hideGoTopBtn() {
+        document.getElementById('goTopBtn').classList.add('hidden')
+    }
 
 
 })
