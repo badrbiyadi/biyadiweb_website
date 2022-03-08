@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./js/main.js"></script>
     <title>Biyadiweb</title>
     <style>
         .text-outlined {
@@ -20,23 +21,25 @@
         }
     </style>
 </head>
-<body>
+<body class="scroll-smooth">
     <!-- navbar -->
     <nav class="container sticky top-0 z-10 h-16 bg-gray-200 md:bg-transparent align-center ">
         <div class="h-full bg-transparent md:bg-gray-200 px-2 grid grid-cols-2 md:grid-cols-4 items-center ">
             <!-- logo -->
             <div class="col-span-1">
                 <div class="w-24">
-                    <img src="./images/logo.png" alt="">
+                    <a href="#home">
+                        <img src="./images/logo.png" alt="">
+                    </a>
                 </div>
 
             </div>
             <!-- links -->
             <div class="hidden md:block  md:col-span-3 lg:col-span-2 space-x-3 lg:justify-self-center justify-self-end">
-                <a class="hover:text-primary" href="#">What we do?</a>
-                <a class="hover:text-primary" href="#">Our services</a>
-                <a class="hover:text-primary" href="#">Why us?</a>
-                <a class="hover:text-primary" href="#">Get in touch</a>
+                <a class="hover:text-primary" href="#whyUs">Why us?</a>
+                <a class="hover:text-primary" href="#ourServices">Our services</a>
+                <a class="hover:text-primary" href="#whatWeDo">What we do?</a>
+                <a class="hover:text-primary" href="#contact">Get in touch</a>
             </div>
             <!-- social media -->
 
@@ -111,7 +114,7 @@
 
             <!-- Hamburger menu -->
 
-            <div class="block md:hidden col-span-1  justify-self-end">
+            <div id="mobileOpenMenuBtn" class="block md:hidden col-span-1  justify-self-end">
                 <div class="p-4 space-y-1  rounded ">
                     <span class="block w-6 h-0.5 bg-gray-600 "></span>
                     <span class="block w-6 h-0.5 bg-gray-600 "></span>
@@ -122,24 +125,24 @@
         </div>
     </nav>
     <!-- Change the class -right-2/3 to right-0 to display the menu -->
-    <div class="fixed z-3 md:hidden top-0 -right-2/3 w-2/3 h-full bg-gray-200 shadow ">
+    <div id="mobileMenu" class="fixed z-20  animate-all duration-300 md:hidden top-0 -right-2/3 w-2/3 h-full bg-gray-200 shadow ">
         <div class="h-16 px-2 mb-4 flex items-center justify-end bg-gray-300 border border-gray-400">
-            <div class="p-2 w-10">
+            <div id="mobileCloseMenuBtn" class="p-2 w-10">
                 <span class="block w-full rotate-45 h-0.5 bg-gray-600"></span>
                 <span class="block w-full  -rotate-45 h-0.5 bg-gray-600"></span>
             </div>            
         </div>
         <!-- links -->
         <div class=" w-full text-center space-y-2">
-            <a class="block py-1 hover:text-primary" href="#">What we do?</a>
-            <a class="block py-1 hover:text-primary" href="#">Our services</a>
-            <a class="block py-1 hover:text-primary" href="#">Why us?</a>
-            <a class="block py-1 hover:text-primary" href="#">Get in touch</a>
+            <a class="block py-1 hover:text-primary" href="#whyUs">Why us?</a>
+            <a class="block py-1 hover:text-primary" href="#ourServices">Our services</a>
+            <a class="block py-1 hover:text-primary" href="#whatWeDo">What we do?</a>
+            <a class="block py-1 hover:text-primary" href="#contact">Get in touch</a>
         </div>
     </div>
 
     <!-- banner -->
-    <section class="banner h-screen relative -top-16 -mb-16  bg-gray-600 bg-blend-overlay">
+    <section id="home" class="banner h-screen relative -top-16 -mb-16  bg-gray-600 bg-blend-overlay">
         <div class="container pt-20 text-gray-100 ">
             <div class="text-7xl xl:text-9xl xl:w-1/2 w-2/3 mb-10  space-y-2">
                 <h1>Strategic <span class="text-outlined">Digital</span> Solutions</h1>                
@@ -148,14 +151,14 @@
                 <p>We have a strong foundation built on legacy and emerging technologies, including excellent track record of on-time deliveries.</p>
             </div>
             <div class="pt-4">
-                <button class="bg-primary  hover:bg-blue-500 text-md capitalize font-bold py-2 px-4 ">_Get a quote </button>
+                <a href="#contact" class="bg-primary  hover:bg-blue-500 text-md capitalize font-bold py-2 px-4 ">_Get a quote </a>
             </div>
         </div>
     </section>
 
     <!-- why us  -->
 
-    <section class="py-4 ">
+    <section id="whyUs" class="py-4 ">
         <div class="container grid  grid-cols-2 xl:grid-cols-5">
             <div class="col-span-3">
                 <div class="pb-8">
@@ -177,7 +180,7 @@
 
     <!-- our service -->
 
-    <section class="py-4 bg-gray-100">
+    <section id="ourServices" class="py-4 bg-gray-100">
         <div class="container">
 
             <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6">
@@ -267,7 +270,7 @@
 
     <!-- what we do -->
 
-    <section class="py-4">
+    <section id="whatWeDo" class="py-4">
         <div class="container">
             <div class="grid grid-cols-1 lg:grid-cols-2">
                 <div class="col-span-1 lg:mr-2">
@@ -339,7 +342,7 @@
 
     <!-- contact -->
 
-    <section class="pb-4 bg-black">
+    <section id="contact" class="pb-4 bg-black">
         <div class=" w-full md:w-2/3 mx-0 py-5 bg-red-700">
             <div class="container">
 
