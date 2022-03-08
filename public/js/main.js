@@ -52,10 +52,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     function makeNavbarTransparent() {
-        // document.getElementById('socialMediaBtns').classList.add('fill-white')
-        // console.log()
-        // var children = Array.prototype.slice.call(document.getElementById("socialMediaBtns").children);
-
         Array.prototype.slice.call(document.getElementById("socialMediaBtns").children)
             .forEach(elem => {
                 elem.classList.add('fill-white')
@@ -65,7 +61,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function makeNavbarDark() {
-        // document.getElementById('socialMediaBtns').classList.remove('fill-white')
         Array.prototype.slice.call(document.getElementById("socialMediaBtns").children)
             .forEach(elem => {
                 elem.classList.remove('fill-white')
@@ -73,6 +68,27 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('navbar').classList.add('md:bg-gray-200')
         document.getElementById('navbar').classList.remove('text-white')
     }
+
+
+    //Show or Hide Content section
+
+    Array.prototype.slice.call(document.getElementsByClassName('contentBlock'))
+        .forEach(block => {
+            block.querySelector('.btnContent').addEventListener('click', function (e) {
+                e.preventDefault()
+                showOrHideContent()
+            })
+
+            function showOrHideContent() {
+                if(block.querySelector('.contentText').classList.contains('hidden')) {
+                    block.querySelector('.contentText').classList.remove('hidden')
+                    block.querySelector('.btnContent').text = '_View Less'
+                }else {
+                    block.querySelector('.contentText').classList.add('hidden')
+                    block.querySelector('.btnContent').text = '_View More'
+                }
+            }
+        })
 
 
 })
