@@ -52,17 +52,28 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     function makeNavbarTransparent() {
-        document.getElementById('socialMediaBtns').classList.add('fill-white')
+        // document.getElementById('socialMediaBtns').classList.add('fill-white')
+        // console.log()
+        // var children = Array.prototype.slice.call(document.getElementById("socialMediaBtns").children);
+
+        Array.prototype.slice.call(document.getElementById("socialMediaBtns").children)
+            .forEach(elem => {
+                elem.classList.add('fill-white')
+            })
         document.getElementById('navbar').classList.remove('md:bg-gray-200')
         document.getElementById('navbar').classList.add('text-white')
     }
 
     function makeNavbarDark() {
-        document.getElementById('socialMediaBtns').classList.remove('fill-white')
+        // document.getElementById('socialMediaBtns').classList.remove('fill-white')
+        Array.prototype.slice.call(document.getElementById("socialMediaBtns").children)
+            .forEach(elem => {
+                elem.classList.remove('fill-white')
+            })
         document.getElementById('navbar').classList.add('md:bg-gray-200')
         document.getElementById('navbar').classList.remove('text-white')
     }
-    
+
 
 })
 
