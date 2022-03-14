@@ -89,20 +89,16 @@ document.addEventListener('DOMContentLoaded', function() {
             function showOrHideContent() {
                 if(block.querySelector('.contentText').classList.contains('hidden')) {
                     block.querySelector('.contentText').classList.remove('hidden')
-                    block.querySelector('.btnContent').text = '_View Less'
+                    block.querySelector('.btnContent').text = '_Voir Moin'
                 }else {
                     block.querySelector('.contentText').classList.add('hidden')
-                    block.querySelector('.btnContent').text = '_View More'
+                    block.querySelector('.btnContent').text = '_Voir Plus'
                 }
             }
         })
 
 
     // Go to top 
-
-
-    console.log(window.scrollY)
-    
 
     function showGoTopBtn() {
         document.getElementById('goTopBtn').classList.remove('hidden')
